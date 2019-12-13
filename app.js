@@ -53,11 +53,11 @@ http.
       pathObj.message = obj.query.message;
       comments.unshift(pathObj);
       res.statusCode = 302;
-      res.setHeader('Location','/')
+      res.setHeader('Location', '/')
       res.end();
     } else {
-      fs.readFile('./views/err.html', (err, data)=>{
-        if(err) throw err;
+      fs.readFile('./views/err.html', (err, data) => {
+        if (err) throw err;
         res.end(data);
       })
     };
