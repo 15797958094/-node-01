@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="public/lib/css/bootstrap.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+          <div class="page-header">
+              <h1>Example page header <small>Subtext for header</small></h1>
+            </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4">
+          <a class="btn btn-default btn-success" href="/post">发表评论</a>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+          <ul class="list-group" style="margin-top:20px;">
+             {{ each comments }} <li class="list-group-item">{{ $value.name }}说:   {{ $value.message }}</li> {{ /each }}
+            </ul>
+      </div>
+    </div>
+    
+  </div>
+</body>
+
+</html>
